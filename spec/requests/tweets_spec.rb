@@ -10,6 +10,7 @@ describe TweetsController, type: :request do
       get root_path
       expect(response.status).to eq 200
     end
+    it "indexアクションにリクエストするとツイートのテキストが表示される" do 
       get root_path
       expect(response.body).to include @tweet.text
     end
